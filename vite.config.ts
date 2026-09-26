@@ -14,10 +14,13 @@ export default defineConfig({
       manifest: {
         name: "Instagram UI",
         short_name: "Instagram",
-        description: "Instagram style social media app",
+        description: "Instagram style social media PWA",
+
         theme_color: "#ffffff",
         background_color: "#ffffff",
+
         display: "standalone",
+        start_url: "/",
 
         icons: [
           {
@@ -34,7 +37,9 @@ export default defineConfig({
       },
 
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,webp}"],
+        globPatterns: [
+          "**/*.{js,css,html,ico,png,svg,webp,jpg,jpeg}",
+        ],
       },
     }),
   ],
